@@ -49,6 +49,15 @@ public class ContactBook {
         counter--;
     }
 
+    /**
+     * Returns the name of the person whose contact is associated with the given phone number
+     * @param number the phone number of the person
+     * @return the name of the person that has the given number
+     */
+    public String getName(int number) {
+        return contacts[searchIndexN(number)].getName();
+    }
+
     //Pre: name != null && hasContact(name)
     public int getPhone(String name) {
         return contacts[searchIndex(name)].getPhone();
